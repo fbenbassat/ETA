@@ -14,10 +14,9 @@ class LoginPage(PageObject):
     id_password = 'password'
 
     # Metodos de login
-    def __init__(self):
-        super(LoginPage, self).__init__()
+    def __init__(self, browser):
+        super(LoginPage, self).__init__(browser=browser)
         self.driver.get(self.url_login)
-
 
     def click_login_btn(self):
         self.driver.find_element(By.ID, self.id_login_btn).click()

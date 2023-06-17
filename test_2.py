@@ -1,11 +1,13 @@
+import pytest
 
 from Pages.ProductsPage import ProductsPage
 
 
 class Test2:
 
-    def test_efetuar_login(self, open_login_page):
-        login_page = open_login_page
+    @pytest.mark.parametrize('all_browser', ['chrome', 'safari', 'firefox'])
+    def test_efetuar_login(self, open_login_page_all_browser):
+        login_page = open_login_page_all_browser
         login_page.efetuar_login()
 
         products_page = ProductsPage(driver=login_page.driver)
