@@ -17,6 +17,9 @@ class ProductsPage(PageObject):
     class_add_to_cart_btn = 'btn_primary'
     class_shopping_cart_badge = 'shopping_cart_badge'
     class_shopping_cart_icon = 'shopping_cart_link'
+    class_remove_btn = 'btn_secondary'
+    text_remove_btn = 'Remove'
+    class_product_item_name = 'inventory_item_name'
 
     def __init__(self, driver):
         super(ProductsPage, self).__init__(driver=driver)
@@ -39,8 +42,13 @@ class ProductsPage(PageObject):
         random_product_index = randint(0, len(products_card_list) - 1)
         product_card = products_card_list[random_product_index]
         product_card.find_element(By.CLASS_NAME, self.class_add_to_cart_btn).click()
+        btn_text = product_card.find_element(By.CLASS_NAME, self.class_remove_btn).text
+        if btn_text != self.text_remove_btn:
+            raise Exception('O botão não contém o texto REMOVE!')
         if self.get_card_number() != '1':
             raise Exception('Produto não adicionando no carrinho de compras!')
+        return product_card.find_element(By.CLASS_NAME, self.class_product_item_name).text
+
 
     def get_card_number(self):
         return self.driver.find_element(By.CLASS_NAME, self.class_shopping_cart_badge).text
