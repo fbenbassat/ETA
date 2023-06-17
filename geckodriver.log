@@ -1,0 +1,16 @@
+1685752609120	geckodriver	INFO	Listening on 127.0.0.1:53486
+1685752609547	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" MOZ_NO_REMOTE="1" "/App ... s" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/qz/7p9frz0529x5krnr19k33_sr0000gp/T/rust_mozprofile86J7XB"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1685752610134	Marionette	INFO	Marionette enabled
+1685752610233	Marionette	INFO	Listening on port 53495
+console.error: "Warning: unrecognized command line flag -remote-allow-hosts\n"
+Read port: 53495
+WebDriver BiDi listening on ws://127.0.0.1:53487
+1685752610307	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+UNSUPPORTED (log once): POSSIBLE ISSUE: unit 1 GLD_TEXTURE_INDEX_2D is unloadable and bound to sampler type (Float) - using zero texture because texture unloadable
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/qz/7p9frz0529x5krnr19k33_sr0000gp/T/rust_mozprofile86J7XB/search.json.mozlz4", (void 0)))
+[ERROR glean_core] Error setting metrics feature config: Json(Error("EOF while parsing a value", line: 1, column: 0))
+DevTools listening on ws://127.0.0.1:53487/devtools/browser/64f6560b-7f35-4d27-b759-9a17538bcef9
+1685755887553	Marionette	INFO	Stopped listening on port 53495
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
